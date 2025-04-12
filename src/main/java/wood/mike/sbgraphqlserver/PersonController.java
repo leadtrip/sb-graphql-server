@@ -7,8 +7,14 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class PersonController {
 
+    private final PersonService personService;
+
+    public PersonController(PersonService personService) {
+        this.personService = personService;
+    }
+
     @QueryMapping
     public Person personById(@Argument String id) {
-        return new Person(1L, "Always", "Bob");
+        return personService.getPerson(id);
     }
 }
