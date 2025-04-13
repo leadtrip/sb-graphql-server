@@ -1,4 +1,6 @@
-### Spring boot graphQL server
+### Spring boot GraphQL server
+
+`http://localhost:8181/graphiql?path=/graphql`
 
 Fetch a Book from the in memory collection:
 ```graphql
